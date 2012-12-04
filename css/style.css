@@ -1,0 +1,11 @@
+/* In this file you should centralize your desktop styles imports
+ * Import this file using the following HTML or equivalent:
+ * <link href="/css/style.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* ==|== Compass CSS3 =======================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xampp\/htdocs\/dev\.xx\/www\/sass\/_layout\.scss}line{font-family:\000033}}
+.game-area {
+  background: #dedede;
+  border: 1px solid #999999;
+  height: 320px;
+  width: 240px;
+}

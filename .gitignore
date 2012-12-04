@@ -1,0 +1,7 @@
+#IDE, sass and livereload temporary files
+.idea
+Guardfile
+.sass-cache
+
+Thumbs.db
+.diff
