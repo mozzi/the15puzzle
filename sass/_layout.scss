@@ -39,6 +39,7 @@
         font: bold 18px/18px Trebuchet MS, Arial, Helvetica, sans-serif;
         margin: 0.5%;
         position: absolute;
+        @include transition-duration(0.4s);
         height: 24%;
         width: 24%;
     }
