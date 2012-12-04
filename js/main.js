@@ -9,7 +9,10 @@ function the15Puzzle(){
         winnerArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0]; //winner array
 
     function shuffleCells(arr){
-        var tmp, current, top = joinedArray.length;
+        var tmp,
+            current,
+            top = joinedArray.length,
+            inversions = 0;
 
         //shuffle array
         if(top) while(--top) {
@@ -17,6 +20,18 @@ function the15Puzzle(){
             tmp = joinedArray[current];
             joinedArray[current] = joinedArray[top];
             joinedArray[top] = tmp;
+        }
+
+        for(var i = 0; i<15; i++){
+            for(var j = i+1; j<16; j++){
+                if(joinedArray[i]>joinedArray[j]){ inversions++; }
+            }
+        }
+
+        if(inversions % 2 != 0){
+            tmp = joinedArray[15];
+            joinedArray[15] = joinedArray[14]
+            joinedArray[14] = tmp;
         }
 
         // split 1 dimension array back to matrix
