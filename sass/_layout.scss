@@ -1,8 +1,58 @@
 @import "base";
 
 .game-area{
-    background: #dedede;
-    border: 1px solid #999999;
+    font: 14px/1em Trebuchet MS, Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 320px;
+}
+
+.moves{
+    margin-bottom: 10px;
+    text-align: center;
+    span{ font-weight: bold; }
+}
+
+.board{
+    background: #995e32;
+    border: 1px solid #993900;
     height: 320px;
-    width: 240px;
+    @include user-select(none);
+}
+
+.tiles{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+
+    li{
+        cursor: move;
+        background-color: #f7f7f7;
+        @include background-image(linear-gradient(#f7f7f7, #e3e3e3));
+        @include border-radius(10px);
+        @include box-sizing(border-box);
+        @include box-shadow(rgba(black, 0.3) 1px 3px 3px , #fff 0px 2px 3px inset);
+        color: #8e8e8e;
+        font-size: 18px;
+        font-weight: bold;
+        font: bold 18px/18px Trebuchet MS, Arial, Helvetica, sans-serif;
+        margin: 0.5%;
+        position: absolute;
+        height: 24%;
+        width: 24%;
+    }
+
+    .tile-inner{
+        font-weight: bold;
+        text-align: center;
+        top: 50%;
+        margin-top: -8px;
+        position: absolute;
+        width: 100%;
+    }
+
+    #tile0{
+        display: none;
+    }
 }
